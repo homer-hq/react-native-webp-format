@@ -12,7 +12,8 @@
 RCT_EXPORT_MODULE()
 - (BOOL)canDecodeImageData:(NSData *)imageData
 {
-    return [[SDImageAPNGCoder sharedCoder] canDecodeFromData:imageData] || [[SDImageWebPCoder sharedCoder] canDecodeFromData:imageData];
+    // [[SDImageAPNGCoder sharedCoder] canDecodeFromData:imageData] 
+    return [[SDImageWebPCoder sharedCoder] canDecodeFromData:imageData];
 }
 - (RCTImageLoaderCancellationBlock)decodeImageData:(NSData *)imageData
                                               size:(CGSize)size
